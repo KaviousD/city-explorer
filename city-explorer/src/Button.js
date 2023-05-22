@@ -4,10 +4,10 @@ import axios from 'axios';
 // making city input for button
 const ButtonForm = () => {
     const [city, setCity] = useState('');
-    const [displayName, setDisplayName] = useState('test');
-    const [lat, setLat] = useState('11');
-    const [lon, setLon] = useState('22');
-    const [MapImageUrl, setMapImageURL] = useState('22')
+    const [displayName, setDisplayName] = useState('');
+    const [lat, setLat] = useState('');
+    const [lon, setLon] = useState('');
+    const [MapImageUrl, setMapImageURL] = useState('')
 
 
     const handelInputChange = (event) => {
