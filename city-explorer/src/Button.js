@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 // making city input for button
-const ButtonForm = () => {
+const ButtonForm = (props) => {
     const [city, setCity] = useState('');
     const [displayName, setDisplayName] = useState('');
     const [lat, setLat] = useState('');
@@ -21,7 +21,7 @@ const ButtonForm = () => {
         // name for city goes here
         let UserInput = event.target[0].value;
         console.log(UserInput);
-
+        // requesting to the lociq
         let response = axios.get(`https://us1.locationiq.com/v1/search?key=pk.a783bdab5c698b1a8f6134eb0f7094d4&q=${UserInput}&format=json`);
 
         response.then(function (res) {
@@ -35,6 +35,13 @@ const ButtonForm = () => {
             .catch(function (error) {
                 console.log(error);
             });
+        // the 
+        let WeatherResponse = axios.get(`http://localhost:3001/weather?searchQuery=${UserInput}`)
+        WeatherResponse.then(function (res) {
+            console.log(res.data)
+            props.setWeatherData(res.data)
+        })
+
     };
     // change the location data to apply to diffrent cities
 
@@ -57,4 +64,8 @@ const ButtonForm = () => {
     )
 }
 
+
+
+
 export default ButtonForm;
+
