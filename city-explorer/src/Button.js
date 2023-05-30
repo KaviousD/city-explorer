@@ -33,7 +33,7 @@ const ButtonForm = (props) => {
             setMapImageURL(`https://maps.locationiq.com/v3/staticmap?center=${cityData.lat},${cityData.lon}&zoom=13&size=600x400&key=pk.a783bdab5c698b1a8f6134eb0f7094d4`);
         })
             .catch(function (error) {
-                console.log(error);
+                console.log("error somthing went wrong");
             });
         // the 
         let WeatherResponse = axios.get(`http://localhost:3001/weather?searchQuery=${UserInput}`)
