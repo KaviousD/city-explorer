@@ -20,3 +20,18 @@ Most likely to use english sans font for the project. the design wil start with 
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
+# Comment
+
+Name:    Date:
+latoya    5/22
+Fredrick  5/22
+
+
+
+comment:
+
+map didnt really work well with phone.
+
+App worked well saw Pieces of the location add more maps.
+
